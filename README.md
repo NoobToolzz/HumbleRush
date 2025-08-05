@@ -8,14 +8,14 @@
 - 🔑 [Obtaining Authentication Token](#obtaining-authentication-token)
 - ⚠️ [Disclaimer](#disclaimer)
 
-# 🌟 Features
+#  <a id="features"></a>🌟 Features
 
 - Boost trophies (10 per request)
 - Claim rewards from trophy paths (currency and lootboxes)
   - Lootboxes don't get credited to your account through this requests-based method.
 - Automatically upgrade all power-ups
 
-# ⚙️ Setup
+# <a id="setup"></a>⚙️ Setup
 
 ```plaintext
 git clone https://github.com/NoobToolzz/HumbleRush.git && cd HumbleRush
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 Before you run HumbleRush, you first need to obtain your authentication token.
 
-# 🔑 Obtaining Authentication Token
+# <a id="obtaining-authentication-token"></a>🔑 Obtaining Authentication Token
 
 1. Head to [rumblerush.io](https://rumblerush.io) and press `CTRL + SHIFT + I`, and go to the “Network” tab in the developer tools.
 2. In the filter/search bar, enter “login.”
@@ -39,6 +39,6 @@ Before you run HumbleRush, you first need to obtain your authentication token.
 Please note that the authentication token changes every ~30-45m. If you encounter any "Access Denied" errors, please re-obtain your authentication token.
 
 
-# ⚠️ Disclaimer
+# <a id="disclaimer"></a>⚠️ Disclaimer
 
 I want to make it clear that I am not responsible for any consequences resulting from your use of HumbleRush to modify or cheat in RumbleRush. By using this tool, you acknowledge that you do so at your own risk and understand the potential consequences.
