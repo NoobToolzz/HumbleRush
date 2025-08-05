@@ -1,5 +1,5 @@
 <h1 align="center">HumbleRush</h1>
-<p align="center">A powerful tool for [RumbleRush](https://rumblerush.io) by PocketHaven.</p>
+<p align="center">A powerful tool for <a href="https://rumblerush.io">RumbleRush</a> by PocketHaven.</p>
 
 # 📚 Table of Contents
 
