@@ -15,6 +15,9 @@
   - Lootboxes don't get credited to your account through this requests-based method.
 - Automatically upgrade all power-ups
 
+## 📝 TODO
+- [ ] Use refresh token to obtain the token instead, eliminates the need to manually obtain the token every hour.
+
 # <a id="setup"></a>⚙️ Setup
 
 ```plaintext
@@ -36,7 +39,7 @@ Before you run HumbleRush, you first need to obtain your authentication token.
 ![Steps](data/attachments/steps.png)
 ### :information_source: Important notice
 
-Please note that the authentication token changes every ~30-45m. If you encounter any "Access Denied" errors, please re-obtain your authentication token.
+Please note that the authentication token changes every 60 minutes. If you encounter any "Access Denied" errors, please re-obtain your authentication token.
 
 
 # <a id="disclaimer"></a>⚠️ Disclaimer
