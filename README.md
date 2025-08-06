@@ -17,6 +17,7 @@
 
 ## 📝 TODO
 - [ ] Use refresh token to obtain the token instead, eliminates the need to manually obtain the token every hour.
+- [ ] Possible GUI using [reflex.dev](https://reflex.dev)
 
 # <a id="setup"></a>⚙️ Setup
 
