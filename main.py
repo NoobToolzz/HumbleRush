@@ -1,14 +1,16 @@
+import os
 from rich import print
 from rich.prompt import Confirm, Prompt
-from data.utils import get_user_agent_rotator, get_headers
+from data.utils import Utils
 from data.trophy import claim_trophies
 from data.reward import claim_rewards
 from data.upgrade import purchaseItemUpgrade
 
+utils = Utils()
+
 
 def main_menu():
-    user_agent_rotator = get_user_agent_rotator()
-    headers = get_headers(user_agent_rotator)
+    headers = utils.get_headers()
 
     print("[bold cyan]Welcome to HumbleRush![/bold cyan]")
     while True:
@@ -23,7 +25,6 @@ def main_menu():
         if choice == "1":
             num_requests = Prompt.ask(
                 "How many requests? (1 = 10 trophies, leave blank for unlimited)",
-                default="",
             )
             num_requests = int(num_requests) if num_requests.isdigit() else float("inf")
             num_threads = 0
@@ -55,4 +56,7 @@ def main_menu():
 
 
 if __name__ == "__main__":
+    utils.startup_checks()  # Makes sure config values are present
+    os.system("cls" if os.name == "nt" else "clear")
+
     main_menu()

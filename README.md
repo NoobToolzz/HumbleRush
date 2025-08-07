@@ -16,8 +16,7 @@
 - Automatically upgrade all power-ups
 
 ## 📝 TODO
-- [ ] Use refresh token to obtain the token instead, eliminates the need to manually obtain the token every hour.
-- [ ] Possible GUI using [reflex.dev](https://reflex.dev)
+- [x] Use refresh token to obtain the token instead, eliminates the need to manually obtain the token every hour.
 
 # <a id="setup"></a>⚙️ Setup
 
@@ -32,16 +31,15 @@ Before you run HumbleRush, you first need to obtain your authentication token.
 # <a id="obtaining-authentication-token"></a>🔑 Obtaining Authentication Token
 
 1. Head to [rumblerush.io](https://rumblerush.io) and press `CTRL + SHIFT + I`, and go to the “Network” tab in the developer tools.
-2. In the filter/search bar, enter “login.”
-3. Look for the POST request to `login` and click it.
-4. Scroll down to “Request Headers” and copy the “Authorization” value.
-5. Paste the copied token into `token.txt` and make sure to save it.
+2. In the filter/search bar, enter “securetoken.”
+3. Look for the **POST** request to `securetoken.googleapis.com` and click it.
+4. Head the "Request" in the opened panel and copy the `refresh_token` value.
+5. Upon startup, you'll be prompted to enter the refresh token.
 
 ![Steps](data/attachments/steps.png)
 ### :information_source: Important notice
 
 Please note that the authentication token changes every 60 minutes. If you encounter any "Access Denied" errors, please re-obtain your authentication token.
-
 
 # <a id="disclaimer"></a>⚠️ Disclaimer
 
