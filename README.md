@@ -33,7 +33,7 @@ Before you run HumbleRush, you first need to obtain your authentication token.
 1. Head to [rumblerush.io](https://rumblerush.io) and press `CTRL + SHIFT + I`, and go to the “Network” tab in the developer tools.
 2. In the filter/search bar, enter “securetoken.”
 3. Look for the **POST** request to `securetoken.googleapis.com` and click it.
-4. Head the "Request" in the opened panel and copy the `refresh_token` value.
+4. Head to the "Request" in the opened panel and copy the `refresh_token` value.
 5. Upon startup, you'll be prompted to enter the refresh token.
 
 ![Steps](data/attachments/steps.png)
