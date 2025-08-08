@@ -18,6 +18,7 @@
 
 ## 📝 TODO
 - [x] Use refresh token to obtain the token instead, eliminates the need to manually obtain the token every hour.
+- [ ] Spoof practice modes to get on top of time trial leaderboards.
 
 # <a id="setup"></a>⚙️ Setup
 
