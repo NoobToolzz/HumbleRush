@@ -6,7 +6,7 @@
 
 - 🌟 [Features](#features)
 - ⚙️ [Setup](#setup)
-- 🔑 [Obtaining Authentication Token](#obtaining-refresh-token)
+- 🔑 [Obtaining Refresh Token](#obtaining-refresh-token)
 - ⚠️ [Disclaimer](#disclaimer)
 
 #  <a id="features"></a>🌟 Features
