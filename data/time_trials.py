@@ -17,9 +17,6 @@ class TimeTrialSpoofer:
             "Steampunk Spinner": "steampunk_spinner",
         }
 
-    def seconds2ms(self, num):
-        return num * 1000
-
     def isEliminationMode(self, map):
         return map in [
             "block_survival",
@@ -41,7 +38,7 @@ class TimeTrialSpoofer:
             "https://us-central1-pocketrun-33bdc.cloudfunctions.net/v0240_maps/setBestTime",
             headers=headers,
             json={
-                "bestTimeInMillisec": self.seconds2ms(time),
+                "bestTimeInMillisec": time * 1000,
                 "isEliminationMode": self.isEliminationMode(map),
                 "isTimeTrial": True,
                 "nickname": username,
