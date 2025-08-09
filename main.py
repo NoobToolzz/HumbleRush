@@ -2,6 +2,7 @@ import os
 from rich import print
 from rich.prompt import Confirm, Prompt
 from data.utils import Utils
+from data.nickname import setNickname
 from data.trophy import claim_trophies
 from data.reward import claim_rewards
 from data.upgrade import purchaseItemUpgrade
@@ -21,9 +22,10 @@ def main_menu():
         print("2. Claim Rewards")
         print("3. Set practice leaderboard time (works on any username)")
         print("4. Purchase item upgrades")
-        print("5. Exit")
+        print("5. Set nickname (bypasses 12 character limit)")
+        print("6. Exit")
 
-        choice = Prompt.ask("Enter your choice", choices=["1", "2", "3", "4", "5"])
+        choice = Prompt.ask("Enter your choice", choices=["1", "2", "3", "4", "5", "6"])
 
         if choice == "1":
             num_requests = Prompt.ask(
@@ -59,6 +61,11 @@ def main_menu():
             purchaseItemUpgrade(headers)
 
         elif choice == "5":
+            nickname = Prompt.ask("Enter your new nickname")
+
+            setNickname(nickname, headers)
+
+        elif choice == "6":
             print("[bold green]Exiting the program. Goodbye![/bold green]")
             break
 

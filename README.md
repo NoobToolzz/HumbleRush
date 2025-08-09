@@ -18,17 +18,20 @@
 - Set a custom time for timed trial leadeboards
   - This works on **ANY** username.
     - If you're not using it on your own username, it will set *your* personal best to the given time but the world record will go to the username you entered.
-    - This means you can use **your own account** to shift anyone else's position on the time trial leaderboards (by incrementing/decrementing).
+    - This means you can use **your own account** to shift anyone else's position on the time trial leaderboards (by incrementing).
+- Set a nickname longer than 12 characters server-side.
+  - This nickname will be shown everywhere. However, in-game, others will see your name with a trailing "..." after the first 12 characters.
 
 ## 📝 TODO
 - [x] Use refresh token to obtain the token instead, eliminates the need to manually obtain the token every hour.
 - [x] Spoof practice modes to get on top of time trial leaderboards.
-- [ ] Bypass the 12 character username limit to the server-side.
+- [x] Bypass the 12 character username limit to the server-side.
 
 # <a id="setup"></a>⚙️ Setup
 
 > [!WARNING]
 > Before you run HumbleRush, you first need to obtain your refresh token.
+
 ```plaintext
 git clone https://github.com/NoobToolzz/HumbleRush.git && cd HumbleRush
 pip install -r requirements.txt
