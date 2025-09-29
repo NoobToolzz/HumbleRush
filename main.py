@@ -71,7 +71,7 @@ def main_menu():
 
 
 if __name__ == "__main__":
-    # utils.startup_checks()  # Makes sure config values are present - temp disabled
+    utils.startup_checks()  # Makes sure config values are present
     os.system("cls" if os.name == "nt" else "clear")
 
     main_menu()
