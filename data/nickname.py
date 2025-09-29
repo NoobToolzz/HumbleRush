@@ -1,10 +1,11 @@
 import requests
 from rich import print
+from data import get_full_url
 
 
 def setNickname(nickname, headers):
     response = requests.post(
-        "https://us-central1-pocketrun-33bdc.cloudfunctions.net/v0240_player/nickname",
+        get_full_url("nickname"),
         headers=headers,
         json={"nickname": nickname},
     )

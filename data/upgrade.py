@@ -1,11 +1,12 @@
 import requests
 from rich import print
+from data import get_full_url
 
 
 def purchaseItemUpgrade(headers):
     while True:
         response = requests.post(
-            "https://us-central1-pocketrun-33bdc.cloudfunctions.net/v0240_items_upgrade/purchaseItemUpgrade",
+            get_full_url("purchaseItemUpgrade"),
             headers=headers,
             json={"purchaseId": "items_upgrade_coins"},
         )

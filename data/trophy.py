@@ -1,12 +1,13 @@
+import time
 import requests
 import threading
-import time
 from rich import print
+from data import get_full_url
 
 
 def claim_trophy(count, headers):
     response = requests.post(
-        "https://us-central1-pocketrun-33bdc.cloudfunctions.net/v0240_player/matchEnd",
+        get_full_url("matchEnd"),
         headers=headers,
         json={"modeType": "Tournament", "place": 1, "challenges": None},
     )

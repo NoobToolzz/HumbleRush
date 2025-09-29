@@ -1,5 +1,6 @@
 import requests
 from rich import print
+from data import get_full_url
 from rich.prompt import Prompt
 
 
@@ -35,7 +36,7 @@ class TimeTrialSpoofer:
 
     def setBestTime(self, time, map, username, headers):
         response = requests.post(
-            "https://us-central1-pocketrun-33bdc.cloudfunctions.net/v0240_maps/setBestTime",
+            get_full_url("setBestTime"),
             headers=headers,
             json={
                 "bestTimeInMillisec": time * 1000,
