@@ -7,7 +7,9 @@ def setNickname(nickname, headers):
     response = requests.post(
         get_full_url("nickname"),
         headers=headers,
-        json={"nickname": nickname},
+        json={
+            "nickname": "".join(char + "\u200B" for char in nickname)
+        },  # Zero-width spaces to bypass language checks
     )
 
     if response.status_code == 200:
