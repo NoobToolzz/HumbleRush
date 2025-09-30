@@ -8,6 +8,7 @@ class TimeTrialSpoofer:
     def __init__(self):
         self.map_codes = {
             "Block Survival (Neon)": "block_survival",
+            "Block Survival (Island)": "block_survival_2",
             "Castle Bash": "castle_bash",
             "Neon Dash Blast": "neo_dash_blast",
             "Island Adventure": "island_adventure",
@@ -16,11 +17,15 @@ class TimeTrialSpoofer:
             "Meltdown Mines": "meltdown_mines",
             "Ultimate Runner": "ultimate_spinner",
             "Steampunk Spinner": "steampunk_spinner",
+            "Meltdown Mines": "meltdown_mines",
+            "Pipeworks Panic": "pipeworks_panic",
+            "Starfield Nebula": "starfield_nebula",
         }
 
     def isEliminationMode(self, map):
         return map in [
             "block_survival",
+            "block_survival_2",
             "ultimate_spinner",
             "steampunk_spinner",
         ]
@@ -49,7 +54,7 @@ class TimeTrialSpoofer:
 
         if response.status_code == 200:
             print(
-                f"[bold green]Successfully set the best time of {time}s for {username}!"
+                f"[bold green]Successfully set the best time of {time}s for [bold yellow]{username}[/bold yellow]!"
             )
         else:
-            print(f"Error: {response.text}")
+            print(f"[bold red]Error: {response.text}")
