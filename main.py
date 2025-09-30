@@ -25,7 +25,7 @@ def main_menu():
         print("q. Exit")
 
         choice = Prompt.ask("Enter your choice", choices=["1", "2", "3", "4", "5", "q"])
-        
+
         """
         if choice == "1":
             num_requests = Prompt.ask(
@@ -45,9 +45,7 @@ def main_menu():
 
         if choice == "1":
             threads = Prompt.ask("How many threads?", default="5", show_default=True)
-            tiers = Prompt.ask(
-                "How many tiers do you want to claim?", default="10", show_default=True
-            )
+            tiers = Prompt.ask("How many tiers do you want to claim?")
 
             claim_rewards(int(tiers), int(threads), headers)
 
