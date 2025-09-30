@@ -7,6 +7,8 @@ TYPES = {
     "claimReward": "ranks",
     "setBestTime": "maps",
     "purchaseItemUpgrade": "items_upgrade",
+    "progressQuests": "quests",
+    "claimQuestReward": "quests",
 }
 
 

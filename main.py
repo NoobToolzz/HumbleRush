@@ -7,13 +7,11 @@ from data.trophy import claim_trophies
 from data.reward import claim_rewards
 from data.upgrade import purchaseItemUpgrade
 from data.time_trials import TimeTrialSpoofer
-
-utils = Utils()
-tts = TimeTrialSpoofer()
+from data.quests import QuestUtilities
 
 
 def main_menu():
-    headers = utils.get_headers()
+    headers = Utils().get_headers()
 
     print("[bold cyan]Welcome to HumbleRush![/bold cyan]")
     while True:
@@ -23,9 +21,12 @@ def main_menu():
         print("3. Set practice leaderboard time (works on any username)")
         print("4. Purchase item upgrades")
         print("5. Set nickname (bypasses 12 character limit)")
-        print("6. Exit")
+        print("6. Spoof & claim daily quests")
+        print("q. Exit")
 
-        choice = Prompt.ask("Enter your choice", choices=["1", "2", "3", "4", "5", "6"])
+        choice = Prompt.ask(
+            "Enter your choice", choices=["1", "2", "3", "4", "5", "6", "q"]
+        )
 
         if choice == "1":
             num_requests = Prompt.ask(
@@ -52,10 +53,10 @@ def main_menu():
 
         elif choice == "3":
             username = Prompt.ask("Enter ANYBODYS username")
-            selected_map = tts.chooseMap()
+            selected_map = TimeTrialSpoofer().chooseMap()
             time = Prompt.ask("Enter the best time in seconds")
 
-            tts.setBestTime(float(time), selected_map, username, headers)
+            TimeTrialSpoofer().setBestTime(float(time), selected_map, username, headers)
 
         elif choice == "4":
             purchaseItemUpgrade(headers)
@@ -66,12 +67,15 @@ def main_menu():
             setNickname(nickname, headers)
 
         elif choice == "6":
+            QuestUtilities().progressQuests(headers)
+
+        elif choice == "q":
             print("[bold green]Exiting the program. Goodbye![/bold green]")
             break
 
 
 if __name__ == "__main__":
-    utils.startup_checks()  # Makes sure config values are present
+    Utils().startup_checks()  # Makes sure config values are present
     os.system("cls" if os.name == "nt" else "clear")
 
     main_menu()
