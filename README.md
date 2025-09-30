@@ -11,7 +11,7 @@
 
 #  <a id="features"></a>🌟 Features
 
-- Boost trophies (10 per request)
+- ~~Boost trophies (10 per request)~~ [PATCHED]
 - Claim rewards from trophy paths (currency and lootboxes)
   - Lootboxes don't get credited to your account through this requests-based method.
 - Automatically upgrade all power-ups
