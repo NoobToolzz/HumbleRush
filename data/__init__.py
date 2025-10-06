@@ -1,5 +1,5 @@
 BASE_URL = "https://us-central1-pocketrun-33bdc.cloudfunctions.net"
-API_VERSION = "v0270"
+API_VERSION = "v0280"
 # Sorted by endpoint:type
 TYPES = {
     "nickname": "player",
