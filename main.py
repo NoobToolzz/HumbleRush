@@ -8,6 +8,7 @@ from data.reward import claim_rewards
 from data.upgrade import purchaseItemUpgrade
 from data.time_trials import TimeTrialSpoofer
 from data.quests import QuestUtilities
+from data.clans import Clans
 
 
 def main_menu():
@@ -22,9 +23,12 @@ def main_menu():
         print("3. Purchase item upgrades")
         print("4. Set nickname (bypasses 12 character limit)")
         print("5. Spoof & claim daily quests")
+        print("6. Apply to clan (spoofed username)")
         print("q. Exit")
 
-        choice = Prompt.ask("Enter your choice", choices=["1", "2", "3", "4", "5", "q"])
+        choice = Prompt.ask(
+            "Enter your choice", choices=["1", "2", "3", "4", "5", "6", "q"]
+        )
 
         """
         if choice == "1":
@@ -48,25 +52,25 @@ def main_menu():
             tiers = Prompt.ask("How many tiers do you want to claim?")
 
             claim_rewards(int(tiers), int(threads), headers)
-
         elif choice == "2":
             username = Prompt.ask("Enter ANYBODYS username")
             selected_map = TimeTrialSpoofer().chooseMap()
             time = Prompt.ask("Enter the best time in seconds")
 
             TimeTrialSpoofer().setBestTime(float(time), selected_map, username, headers)
-
         elif choice == "3":
             purchaseItemUpgrade(headers)
-
         elif choice == "4":
             nickname = Prompt.ask("Enter your new nickname")
 
             setNickname(nickname, headers)
-
         elif choice == "5":
             QuestUtilities().progressQuests(headers)
+        elif choice == "6":
+            clan_id = Prompt.ask("Enter the Clan ID or search query").strip("#")
+            nickname = Prompt.ask("Enter a spoof nickname")
 
+            Clans().apply(clan_id, nickname, headers)
         elif choice == "q":
             print("[bold green]Exiting the program. Goodbye![/bold green]")
             break

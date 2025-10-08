@@ -9,6 +9,10 @@ TYPES = {
     "purchaseItemUpgrade": "items_upgrade",
     "progressQuests": "quests",
     "claimQuestReward": "quests",
+    "apply": "clubs",
+    "search": "clubs",
+    "getClubData": "clubs",
+    "leave": "clubs",
 }
 
 

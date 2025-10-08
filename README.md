@@ -21,8 +21,11 @@
     - This means you can use **your own account** to shift anyone else's position on the time trial leaderboards (by incrementing).
 - Set a nickname longer than 12 characters server-side.
   - This nickname will be shown everywhere. However, in-game, others will see your name with a trailing "..." after the first 12 characters.
-  - Bypasses language checks and allows spaces
+  - Bypasses language checks and allows spaces.
 - Spoof daily quests and claim their rewards
+- Apply to clans with a spoofed username
+  - Clan search built-in.
+  - Spoofed username shows server-side, not client-side.
 
 ## 📝 TODO
 - [x] Use refresh token to obtain the token instead, eliminates the need to manually obtain the token every hour.
